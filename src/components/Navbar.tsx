@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const navItems = ["About", "Projects", "Skills", "Experience", "GitHub", "Contact"];
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Profiles", href: "#coding-profiles" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,18 +31,18 @@ const Navbar = () => {
           SV.
         </motion.a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navItems.map((item, i) => (
             <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium tracking-wide uppercase"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i, duration: 0.5 }}
               whileHover={{ y: -2 }}
             >
-              {item}
+              {item.label}
             </motion.a>
           ))}
           <motion.a
@@ -61,8 +69,8 @@ const Navbar = () => {
       >
         <div className="px-6 py-8 flex flex-col gap-6">
           {navItems.map((item) => (
-            <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsOpen(false)} className="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
-              {item}
+            <a key={item.label} href={item.href} onClick={() => setIsOpen(false)} className="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
+              {item.label}
             </a>
           ))}
         </div>
