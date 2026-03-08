@@ -13,6 +13,7 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showName, setShowName] = useState(false);
 
   return (
     <motion.nav
