@@ -23,14 +23,58 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <motion.a
-          href="#"
-          className="text-2xl font-bold text-gradient-primary"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          SV.
-        </motion.a>
+        <div className="relative">
+          <motion.a
+            href="#"
+            className="text-2xl font-bold text-gradient-primary"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onHoverStart={() => setShowName(true)}
+            onHoverEnd={() => setShowName(false)}
+          >
+            SV.
+          </motion.a>
+
+          <AnimatePresence>
+            {showName && (
+              <motion.div
+                className="absolute top-full left-1/2 mt-3 pointer-events-none"
+                initial={{ opacity: 0, y: -8, scale: 0.8, x: "-50%" }}
+                animate={{ opacity: 1, y: 0, scale: 1, x: "-50%" }}
+                exit={{ opacity: 0, y: -6, scale: 0.85, x: "-50%" }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <div className="relative px-5 py-2.5 rounded-2xl whitespace-nowrap"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(82 85% 55% / 0.12), hsl(280 80% 60% / 0.1))",
+                    backdropFilter: "blur(16px)",
+                    border: "1px solid hsl(82 85% 55% / 0.2)",
+                    boxShadow: "0 8px 32px -8px hsl(82 85% 55% / 0.25), 0 0 60px -20px hsl(280 80% 60% / 0.15)",
+                  }}
+                >
+                  <motion.span
+                    className="text-sm font-semibold text-gradient-primary"
+                    initial={{ filter: "blur(4px)" }}
+                    animate={{ filter: "blur(0px)" }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                  >
+                    Sahiti Veeravalli
+                  </motion.span>
+                  {/* Cloud tail */}
+                  <div
+                    className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 rounded-sm"
+                    style={{
+                      background: "linear-gradient(135deg, hsl(82 85% 55% / 0.12), hsl(280 80% 60% / 0.1))",
+                      border: "1px solid hsl(82 85% 55% / 0.2)",
+                      borderBottom: "none",
+                      borderRight: "none",
+                    }}
+                  />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
 
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item, i) => (
