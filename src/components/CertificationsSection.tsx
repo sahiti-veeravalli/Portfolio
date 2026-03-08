@@ -40,6 +40,38 @@ const certifications = [
   },
 ];
 
+const courses = [
+  {
+    title: "Full-Stack Web Development",
+    platform: "Udemy",
+    instructor: "Dr. Angela Yu",
+    emoji: "🌐",
+    color: "hsl(200 80% 55%)",
+  },
+  {
+    title: "Machine Learning Specialization",
+    platform: "Coursera",
+    instructor: "Andrew Ng",
+    emoji: "🤖",
+    color: "hsl(320 80% 55%)",
+    titleGradient: "from-[hsl(82_85%_55%)] to-[hsl(280_80%_60%)]",
+  },
+  {
+    title: "React – The Complete Guide",
+    platform: "Udemy",
+    instructor: "Maximilian Schwarzmüller",
+    emoji: "⚡",
+    color: "hsl(30 90% 55%)",
+  },
+  {
+    title: "Python for Data Science & AI",
+    platform: "IBM / Coursera",
+    instructor: "IBM Team",
+    emoji: "🐍",
+    color: "hsl(145 70% 50%)",
+  },
+];
+
 const CertificationsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
