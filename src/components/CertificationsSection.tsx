@@ -5,53 +5,38 @@ const certifications = [
   {
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
-    date: "2025",
-    icon: "☁️",
-    color: "from-[hsl(40_90%_55%)] to-[hsl(25_85%_50%)]",
-    link: "#",
-  },
-  {
-    title: "Google Data Analytics Professional Certificate",
-    issuer: "Google / Coursera",
     date: "2024",
-    icon: "📊",
-    color: "from-[hsl(200_80%_50%)] to-[hsl(220_70%_45%)]",
+    color: "hsl(82 85% 55%)",
+    glowBorder: "hsl(82 85% 55% / 0.4)",
+    titleGradient: "from-[hsl(82_85%_55%)] to-[hsl(160_70%_50%)]",
     link: "#",
   },
   {
-    title: "Meta Front-End Developer Certificate",
-    issuer: "Meta / Coursera",
+    title: "Meta Frontend Developer Certificate",
+    issuer: "Meta (Coursera)",
     date: "2024",
-    icon: "⚛️",
-    color: "from-[hsl(210_90%_55%)] to-[hsl(230_80%_50%)]",
+    color: "hsl(280 80% 60%)",
+    glowBorder: "hsl(280 80% 60% / 0.3)",
+    titleGradient: "",
     link: "#",
   },
-];
-
-const courses = [
   {
-    title: "Full-Stack Web Development",
-    platform: "Udemy",
-    instructor: "Dr. Angela Yu",
-    icon: "🌐",
+    title: "Full Stack Web Development",
+    issuer: "Udemy",
+    date: "2023",
+    color: "hsl(280 80% 60%)",
+    glowBorder: "hsl(280 80% 60% / 0.2)",
+    titleGradient: "",
+    link: "#",
   },
   {
-    title: "Machine Learning Specialization",
-    platform: "Coursera",
-    instructor: "Andrew Ng",
-    icon: "🤖",
-  },
-  {
-    title: "React – The Complete Guide",
-    platform: "Udemy",
-    instructor: "Maximilian Schwarzmüller",
-    icon: "⚡",
-  },
-  {
-    title: "Python for Data Science & AI",
-    platform: "IBM / Coursera",
-    instructor: "IBM Team",
-    icon: "🐍",
+    title: "Python for Data Science",
+    issuer: "IBM (Coursera)",
+    date: "2023",
+    color: "hsl(145 70% 50%)",
+    glowBorder: "hsl(145 70% 50% / 0.2)",
+    titleGradient: "",
+    link: "#",
   },
 ];
 
@@ -60,7 +45,7 @@ const CertificationsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="certifications" className="py-32 bg-card/30 relative overflow-hidden">
+    <section id="certifications" className="py-32 relative overflow-hidden">
       <motion.div
         className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-primary/3 blur-3xl"
         animate={{ rotate: [0, 360] }}
@@ -92,86 +77,65 @@ const CertificationsSection = () => {
           </motion.h2>
         </motion.div>
 
-        {/* Certifications */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {certifications.map((cert, i) => (
             <motion.a
               key={cert.title}
               href={cert.link}
-              className="group block relative p-6 rounded-2xl bg-card border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, y: 60, rotateX: -10 }}
-              animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
-              transition={{ delay: 0.3 + i * 0.15, duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
-              whileHover={{ y: -10, scale: 1.03 }}
+              className="group relative flex items-center gap-5 p-5 md:p-6 rounded-2xl bg-card border border-border transition-all duration-500 overflow-hidden"
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ delay: 0.3 + i * 0.12, duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
+              whileHover={{
+                y: -6,
+                scale: 1.02,
+                borderColor: cert.glowBorder,
+                boxShadow: `0 0 30px -8px ${cert.glowBorder}, inset 0 0 30px -15px ${cert.glowBorder}`,
+              }}
               style={{ perspective: "1000px" }}
             >
-              {/* Gradient accent bar */}
+              {/* Medal icon */}
               <motion.div
-                className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cert.color}`}
-                initial={{ scaleX: 0 }}
-                animate={isInView ? { scaleX: 1 } : {}}
-                transition={{ delay: 0.5 + i * 0.15, duration: 0.8 }}
-                style={{ transformOrigin: "left" }}
-              />
-
-              <motion.span
-                className="text-4xl block mb-4"
-                animate={isInView ? { rotate: [0, -15, 15, -10, 10, 0] } : {}}
-                transition={{ delay: 0.8 + i * 0.15, duration: 0.6 }}
+                className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
+                style={{ backgroundColor: `${cert.color}15`, border: `1px solid ${cert.color}30` }}
+                whileHover={{ scale: 1.15, rotate: [0, -8, 8, 0] }}
               >
-                {cert.icon}
-              </motion.span>
-              <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-2">
-                {cert.title}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-1">{cert.issuer}</p>
-              <span className="text-xs font-mono text-primary/60">{cert.date}</span>
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke={cert.color} strokeWidth="1.5">
+                  <circle cx="12" cy="9" r="5" />
+                  <path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5" />
+                </svg>
+              </motion.div>
 
-              {/* Hover arrow */}
+              <div className="flex-1 min-w-0">
+                <h3
+                  className={`text-base md:text-lg font-bold mb-1 transition-colors duration-300 ${
+                    cert.titleGradient
+                      ? `bg-clip-text text-transparent bg-gradient-to-r ${cert.titleGradient}`
+                      : "text-foreground group-hover:text-primary"
+                  }`}
+                >
+                  {cert.title}
+                </h3>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                  <span>{cert.issuer}</span>
+                  <span className="text-border">•</span>
+                  <span>{cert.date}</span>
+                </div>
+              </div>
+
+              {/* External link icon */}
               <motion.div
-                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 shrink-0"
                 whileHover={{ scale: 1.2 }}
               >
-                <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <svg className="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </motion.div>
             </motion.a>
-          ))}
-        </div>
-
-        {/* Courses */}
-        <motion.h3
-          className="text-2xl font-bold text-foreground mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8 }}
-        >
-          Relevant <span className="text-gradient-accent">Courses</span>
-        </motion.h3>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {courses.map((course, i) => (
-            <motion.div
-              key={course.title}
-              className="p-5 rounded-xl bg-card border border-border hover:border-primary/20 transition-all duration-500 group"
-              initial={{ opacity: 0, y: 40, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ delay: 0.9 + i * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
-              whileHover={{ y: -6, scale: 1.04, boxShadow: "0 15px 35px -10px hsl(82 85% 55% / 0.1)" }}
-            >
-              <motion.span
-                className="text-2xl block mb-3"
-                whileHover={{ scale: 1.3, rotate: [0, -10, 10, 0] }}
-              >
-                {course.icon}
-              </motion.span>
-              <h4 className="text-sm font-bold text-foreground group-hover:text-primary transition-colors mb-1">
-                {course.title}
-              </h4>
-              <p className="text-xs text-muted-foreground">{course.platform}</p>
-              <p className="text-xs text-primary/50 mt-1">{course.instructor}</p>
-            </motion.div>
           ))}
         </div>
       </div>
