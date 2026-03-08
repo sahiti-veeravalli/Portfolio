@@ -170,6 +170,52 @@ const CertificationsSection = () => {
             </motion.a>
           ))}
         </div>
+
+        {/* Relevant Courses */}
+        <motion.h3
+          className="text-2xl md:text-3xl font-bold text-foreground mt-20 mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.8 }}
+        >
+          Relevant <span className="text-gradient-accent">Courses</span>
+        </motion.h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {courses.map((course, i) => (
+            <motion.div
+              key={course.title}
+              className="group p-5 rounded-2xl bg-card border border-border hover:border-primary/20 transition-all duration-500"
+              initial={{ opacity: 0, y: 40, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ delay: 0.9 + i * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
+              whileHover={{
+                y: -8,
+                scale: 1.04,
+                boxShadow: "0 20px 40px -12px hsl(82 85% 55% / 0.1)",
+              }}
+            >
+              <motion.span
+                className="text-3xl block mb-4"
+                whileHover={{ scale: 1.3, rotate: [0, -12, 12, 0] }}
+                transition={{ duration: 0.4 }}
+              >
+                {course.emoji}
+              </motion.span>
+              <h4
+                className={`text-sm font-bold mb-2 transition-colors duration-300 ${
+                  course.titleGradient
+                    ? `bg-clip-text text-transparent bg-gradient-to-r ${course.titleGradient}`
+                    : "text-foreground group-hover:text-primary"
+                }`}
+              >
+                {course.title}
+              </h4>
+              <p className="text-xs text-primary/60 mb-0.5">{course.platform}</p>
+              <p className="text-xs text-muted-foreground italic">{course.instructor}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
