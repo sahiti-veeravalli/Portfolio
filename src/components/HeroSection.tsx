@@ -104,14 +104,24 @@ const HeroSection = () => {
             </motion.span>
           </h1>
 
-          <motion.p
-            className="text-muted-foreground text-lg md:text-xl max-w-lg mx-auto mb-12"
+          <motion.div
+            className="flex flex-col items-center gap-2 mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.8 }}
           >
-            Crafting immersive digital experiences with clean code and bold creativity.
-          </motion.p>
+            <p className="text-muted-foreground text-lg md:text-xl max-w-lg">
+              Crafting immersive digital experiences with clean code and bold creativity.
+            </p>
+            <motion.span
+              className="flex items-center gap-1.5 text-sm text-primary/70 font-mono"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.2 }}
+            >
+              <span>📍</span> Hyderabad, India
+            </motion.span>
+          </motion.div>
 
           <motion.div
             className="flex items-center justify-center gap-4"

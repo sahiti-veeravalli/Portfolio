@@ -38,39 +38,32 @@ const Navbar = () => {
           <AnimatePresence>
             {showName && (
               <motion.div
-                className="absolute top-full left-1/2 mt-3 pointer-events-none"
-                initial={{ opacity: 0, y: -8, scale: 0.8, x: "-50%" }}
-                animate={{ opacity: 1, y: 0, scale: 1, x: "-50%" }}
-                exit={{ opacity: 0, y: -6, scale: 0.85, x: "-50%" }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute top-[80%] left-[60%] pointer-events-none z-50"
+                initial={{ opacity: 0, scale: 0.5, y: -10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.6, y: -8 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               >
-                <div className="relative px-5 py-2.5 rounded-2xl whitespace-nowrap"
-                  style={{
-                    background: "linear-gradient(135deg, hsl(82 85% 55% / 0.12), hsl(280 80% 60% / 0.1))",
-                    backdropFilter: "blur(16px)",
-                    border: "1px solid hsl(82 85% 55% / 0.2)",
-                    boxShadow: "0 8px 32px -8px hsl(82 85% 55% / 0.25), 0 0 60px -20px hsl(280 80% 60% / 0.15)",
-                  }}
+                {/* SVG cloud shape */}
+                <svg width="200" height="80" viewBox="0 0 200 80" fill="none" className="drop-shadow-[0_8px_24px_hsl(82_85%_55%/0.3)]">
+                  {/* Cloud body */}
+                  <ellipse cx="100" cy="48" rx="85" ry="28" fill="hsl(82 85% 55% / 0.08)" stroke="hsl(82 85% 55% / 0.25)" strokeWidth="1" />
+                  <ellipse cx="55" cy="42" rx="40" ry="24" fill="hsl(82 85% 55% / 0.06)" />
+                  <ellipse cx="140" cy="44" rx="38" ry="22" fill="hsl(280 80% 60% / 0.05)" />
+                  <ellipse cx="85" cy="35" rx="30" ry="18" fill="hsl(82 85% 55% / 0.04)" />
+                  {/* Small bubble connectors going to top-left */}
+                  <circle cx="22" cy="22" r="10" fill="hsl(82 85% 55% / 0.1)" stroke="hsl(82 85% 55% / 0.2)" strokeWidth="0.8" />
+                  <circle cx="12" cy="10" r="5" fill="hsl(82 85% 55% / 0.12)" stroke="hsl(82 85% 55% / 0.2)" strokeWidth="0.6" />
+                </svg>
+                {/* Text overlay */}
+                <motion.span
+                  className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gradient-primary whitespace-nowrap pt-2"
+                  initial={{ filter: "blur(6px)" }}
+                  animate={{ filter: "blur(0px)" }}
+                  transition={{ duration: 0.5, delay: 0.12 }}
                 >
-                  <motion.span
-                    className="text-sm font-semibold text-gradient-primary"
-                    initial={{ filter: "blur(4px)" }}
-                    animate={{ filter: "blur(0px)" }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                  >
-                    Sahiti Veeravalli
-                  </motion.span>
-                  {/* Cloud tail */}
-                  <div
-                    className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 rounded-sm"
-                    style={{
-                      background: "linear-gradient(135deg, hsl(82 85% 55% / 0.12), hsl(280 80% 60% / 0.1))",
-                      border: "1px solid hsl(82 85% 55% / 0.2)",
-                      borderBottom: "none",
-                      borderRight: "none",
-                    }}
-                  />
-                </div>
+                  Sahiti Veeravalli
+                </motion.span>
               </motion.div>
             )}
           </AnimatePresence>
