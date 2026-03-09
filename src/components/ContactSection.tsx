@@ -68,7 +68,7 @@ const ContactSection = () => {
             { label: "Twitter", href: "#", icon: (
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             )},
-     https://www.linkedin.com/in/sahiti-veeravalli/      { label: "LinkedIn", href: "#", icon: (
+     { label: "LinkedIn", href: "https://www.linkedin.com/in/sahiti-veeravalli/", icon: (
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
             )},
             { label: "Website", href: "#", icon: (

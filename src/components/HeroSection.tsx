@@ -141,8 +141,8 @@ const HeroSection = () => {
                 </svg>
                 <span className="text-sm font-medium">LinkedIn</span>
               </motion.a>
-             hi.veeravalli19@gmaila
-                href="mailto:sahiti@example.com"
+              <motion.a
+                href="mailto:sahithi.veeravalli19@gmail.com"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card/50 text-muted-foreground hover:border-primary/40 hover:text-primary transition-all duration-300"
                 whileHover={{ y: -2, scale: 1.05 }}>
                 
