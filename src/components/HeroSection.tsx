@@ -89,15 +89,15 @@ const HeroSection = () => {
             Full-Stack Developer
           </motion.p>
 
-          <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold leading-[0.9] mb-8">
-            <span className="block">
+          <h1 className="leading-[0.9] mb-8">
+            <span className="block text-3xl md:text-5xl lg:text-6xl font-light text-muted-foreground">
               <AnimatedText text="Hi, I'm" />
             </span>
-            <span className="block text-gradient-primary">
+            <span className="block text-5xl md:text-7xl lg:text-9xl font-bold text-gradient-primary">
               <AnimatedText text="Sahiti" className="text-gradient-primary" />
             </span>
             <motion.span
-              className="block text-3xl md:text-5xl lg:text-6xl mt-4 text-muted-foreground font-light"
+              className="block text-5xl md:text-7xl lg:text-9xl mt-4 font-bold"
               initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1.2, delay: 1.5 }}
