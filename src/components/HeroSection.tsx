@@ -124,7 +124,7 @@ const HeroSection = () => {
               <span>📍</span> Hyderabad, India
             </motion.span>
             <motion.div
-              className="flex items-center gap-4 mt-3"
+              className="flex items-center justify-center gap-4 mt-3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2.4 }}
