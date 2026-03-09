@@ -5,8 +5,8 @@ const education = [
   {
     degree: "B.Tech in Computer Science & Engineering",
     institution: "VNR Vignana Jyothi Institute of Engineering & Technology",
-    duration: "2022 – 2026",
-    grade: "CGPA: 8.5 / 10",
+    duration: "2023– 2027",
+    grade: "CGPA: 8.4 / 10",
     highlights: ["Data Structures & Algorithms", "Web Technologies", "Cloud Computing", "Machine Learning"],
   },
   {
