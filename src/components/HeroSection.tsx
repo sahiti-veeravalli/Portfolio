@@ -130,7 +130,7 @@ const HeroSection = () => {
               transition={{ delay: 2.4 }}>
               
               <motion.a
-                href="#"
+                href="https://www.linkedin.com/in/sahiti-veeravalli/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card/50 text-muted-foreground hover:border-primary/40 hover:text-primary transition-all duration-300"
