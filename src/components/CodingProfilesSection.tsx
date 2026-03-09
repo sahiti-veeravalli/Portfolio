@@ -36,7 +36,7 @@ const profiles = [
     icon: "M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.18L18.36 7.5 12 10.82 5.64 7.5 12 4.18zM5 9.12l6 3.33v6.37l-6-3.33V9.12zm14 0v6.37l-6 3.33v-6.37l6-3.33z",
     color: "hsl(145 70% 50%)",
     glowColor: "hsl(145 70% 50% / 0.2)",
-    link: "#",
+    link: "https://www.hackerrank.com/profile/sahitiii",
   },
   {
     platform: "Codeforces",
