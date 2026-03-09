@@ -77,7 +77,7 @@ const ExperienceSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Experience & <span className="text-gradient-accent">Achievements</span>
+            Experience & <span className="text-gradient-primary">Achievements</span>
           </motion.h2>
         </motion.div>
 
