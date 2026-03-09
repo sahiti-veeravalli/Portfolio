@@ -44,6 +44,7 @@ const HeroSection = () => {
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg">
+      <HeroParticles />
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
         <motion.img
           src={heroImage}
