@@ -67,7 +67,7 @@ const SkillsSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Skills & <span className="text-gradient-accent">Tools</span>
+            Skills & <span className="text-gradient-primary">Tools</span>
           </motion.h2>
         </motion.div>
 
@@ -114,11 +114,7 @@ const SkillsSection = () => {
                       className="h-full rounded-full"
                       style={{
                         background:
-                          ci === 2
-                            ? "linear-gradient(90deg, hsl(280 80% 60%), hsl(320 80% 55%))"
-                            : ci === 1
-                            ? "linear-gradient(90deg, hsl(200 80% 55%), hsl(220 70% 50%))"
-                            : "linear-gradient(90deg, hsl(82 85% 55%), hsl(120 70% 45%))",
+                      "linear-gradient(90deg, hsl(82 85% 55%), hsl(120 70% 45%))",
                       }}
                       initial={{ width: 0, opacity: 0 }}
                       animate={isInView ? { width: `${skill.level}%`, opacity: 1 } : {}}

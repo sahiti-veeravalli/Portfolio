@@ -38,9 +38,9 @@ const experiences = [
 
 const typeColors: Record<string, string> = {
   internship: "border-l-primary",
-  certification: "border-l-accent",
-  hackathon: "border-l-[hsl(45_90%_55%)]",
-  achievement: "border-l-[hsl(200_80%_55%)]",
+  certification: "border-l-primary",
+  hackathon: "border-l-primary",
+  achievement: "border-l-primary",
 };
 
 const typeIcons: Record<string, string> = {
@@ -77,7 +77,7 @@ const ExperienceSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Experience & <span className="text-gradient-accent">Achievements</span>
+            Experience & <span className="text-gradient-primary">Achievements</span>
           </motion.h2>
         </motion.div>
 
