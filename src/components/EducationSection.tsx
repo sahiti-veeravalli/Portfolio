@@ -11,9 +11,9 @@ const education = [
   },
   {
     degree: "Intermediate (MPC)",
-    institution: "Sri Chaitanya Junior College",
-    duration: "2020 – 2022",
-    grade: "Score: 95%",
+    institution: "Sri Chaitanya Junior College, Uppal, Hyderabad",
+    duration: "2021 – 2023",
+    grade: "Score: 82%",
     highlights: ["Mathematics", "Physics", "Chemistry"],
   },
   {
