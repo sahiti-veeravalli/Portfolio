@@ -67,7 +67,7 @@ const SkillsSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Skills & <span className="text-gradient-accent">Tools</span>
+            Skills & <span className="text-gradient-primary">Tools</span>
           </motion.h2>
         </motion.div>
 
