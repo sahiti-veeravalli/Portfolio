@@ -4,23 +4,23 @@ import { useRef } from "react";
 const education = [
   {
     degree: "B.Tech in Computer Science & Engineering",
-    institution: "VNR Vignana Jyothi Institute of Engineering & Technology",
-    duration: "2022 – 2026",
-    grade: "CGPA: 8.5 / 10",
+    institution: "CMR Institute of Technology, Medchal, Hyderabad",
+    duration: "2023– 2027",
+    grade: "CGPA: 8.4 / 10",
     highlights: ["Data Structures & Algorithms", "Web Technologies", "Cloud Computing", "Machine Learning"],
   },
   {
     degree: "Intermediate (MPC)",
-    institution: "Sri Chaitanya Junior College",
-    duration: "2020 – 2022",
-    grade: "Score: 95%",
+    institution: "Sri Chaitanya Junior College, Uppal, Hyderabad",
+    duration: "2021 – 2023",
+    grade: "Score: 82%",
     highlights: ["Mathematics", "Physics", "Chemistry"],
   },
   {
     degree: "SSC (10th Grade)",
-    institution: "Delhi Public School",
-    duration: "2019 – 2020",
-    grade: "CGPA: 9.8 / 10",
+    institution: "Sri Chaitanya Techno School, Ecil",
+    duration: "2018 – 2021",
+    grade: "CGPA: 10 / 10",
     highlights: ["School Topper", "Academic Excellence Award"],
   },
 ];
