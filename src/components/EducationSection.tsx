@@ -4,7 +4,7 @@ import { useRef } from "react";
 const education = [
   {
     degree: "B.Tech in Computer Science & Engineering",
-    institution: "VNR Vignana Jyothi Institute of Engineering & Technology",
+    institution: "CMR Institute of Technology, Medchal, Hyderabad",
     duration: "2023– 2027",
     grade: "CGPA: 8.4 / 10",
     highlights: ["Data Structures & Algorithms", "Web Technologies", "Cloud Computing", "Machine Learning"],
