@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import HeroParticles from "./HeroParticles";
 import heroImage from "@/assets/hero-3d.png";
 
 const letterVariants = {
