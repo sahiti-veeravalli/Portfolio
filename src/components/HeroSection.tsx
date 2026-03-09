@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import HeroParticles from "./HeroParticles";
 import heroImage from "@/assets/hero-3d.png";
 
 const letterVariants = {
@@ -43,6 +44,7 @@ const HeroSection = () => {
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg">
+      <HeroParticles />
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
         <motion.img
           src={heroImage}
