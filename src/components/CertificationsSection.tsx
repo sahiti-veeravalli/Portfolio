@@ -49,9 +49,9 @@ const courses = [
     color: "hsl(200 80% 55%)",
   },
   {
-    title: "Machine Learning Specialization",
-    platform: "Coursera",
-    instructor: "Andrew Ng",
+    title: "AIML 24 Week Training",
+    platform: "IIIT  Hyderabad",
+    instructor: "Dr.C.K.Raju",
     emoji: "🤖",
     color: "hsl(320 80% 55%)",
     titleGradient: "from-[hsl(82_85%_55%)] to-[hsl(280_80%_60%)]",

@@ -40,7 +40,7 @@ const ContactSection = () => {
         </motion.p>
 
         <motion.a
-          href="mailto:sahithi.veeravalli19@gmail.com"
+          href="mailto:sahithi.veeravalli19@gmailalli19@gmail.com"
           className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground rounded-full text-lg font-semibold glow-primary mx-auto"
           whileHover={{ scale: 1.05, boxShadow: "0 0 60px -5px hsl(82 85% 55% / 0.5)" }}
           whileTap={{ scale: 0.97 }}
@@ -51,7 +51,7 @@ const ContactSection = () => {
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          sahiti@example.com
+   hi.veeravalli19@gmailhiti@example.com
         </motion.a>
 
         {/* Social icons */}

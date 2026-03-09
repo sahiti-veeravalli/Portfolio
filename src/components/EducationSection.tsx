@@ -18,9 +18,9 @@ const education = [
   },
   {
     degree: "SSC (10th Grade)",
-    institution: "Delhi Public School",
-    duration: "2019 – 2020",
-    grade: "CGPA: 9.8 / 10",
+    institution: "Sri Chaitanya Techno School, Ecil",
+    duration: "2018 – 2021",
+    grade: "CGPA: 10 / 10",
     highlights: ["School Topper", "Academic Excellence Award"],
   },
 ];
