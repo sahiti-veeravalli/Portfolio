@@ -38,9 +38,9 @@ const experiences = [
 
 const typeColors: Record<string, string> = {
   internship: "border-l-primary",
-  certification: "border-l-accent",
-  hackathon: "border-l-[hsl(45_90%_55%)]",
-  achievement: "border-l-[hsl(200_80%_55%)]",
+  certification: "border-l-primary",
+  hackathon: "border-l-primary",
+  achievement: "border-l-primary",
 };
 
 const typeIcons: Record<string, string> = {
