@@ -124,7 +124,7 @@ const GitHubSection = () => {
           transition={{ delay: 1.2 }}
         >
           <motion.a
-            href="https://github.com"
+            href="https://github.com/sahiti-veeravalli"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 border border-border rounded-full text-foreground font-semibold hover:border-primary hover:text-primary transition-all duration-300"
