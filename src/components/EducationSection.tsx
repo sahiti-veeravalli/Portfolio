@@ -58,7 +58,7 @@ const EducationSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Academic <span className="text-gradient-accent">Journey</span>
+            Academic <span className="text-gradient-primary">Journey</span>
           </motion.h2>
         </motion.div>
 
