@@ -23,6 +23,13 @@ const education = [
     grade: "CGPA: 10 / 10",
     highlights: ["School Topper", "Academic Excellence Award"],
   },
+  {
+    degree: "Schooling",
+    institution: "St Anns High School, Tarnaka, Hyderabad",
+    duration: "2008 – 2018",
+    grade: "",
+    highlights: [],
+  },
 ];
 
 const EducationSection = () => {
@@ -118,12 +125,14 @@ const EducationSection = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{edu.duration}</span>
-                    <motion.span
-                      className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold"
-                      whileHover={{ scale: 1.1, boxShadow: "0 0 20px -5px hsl(82 85% 55% / 0.4)" }}
-                    >
-                      {edu.grade}
-                    </motion.span>
+                    {edu.grade && (
+                      <motion.span
+                        className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold"
+                        whileHover={{ scale: 1.1, boxShadow: "0 0 20px -5px hsl(82 85% 55% / 0.4)" }}
+                      >
+                        {edu.grade}
+                      </motion.span>
+                    )}
                   </div>
                 </div>
 
