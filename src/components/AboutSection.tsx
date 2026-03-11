@@ -44,13 +44,13 @@ const AboutSection = () => {
             </motion.h2>
             <motion.div variants={item} className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Hi! I'm Sahiti Veeravalli a full-stack developer who loves turning complex problems into elegant, user-friendly solutions. I thrive at the intersection of design and engineering.
+                Hi! I’m Sahiti Veeravalli, a B.Tech Computer Science student passionate about using technology to solve real-world problems. I enjoy exploring new tools, learning modern technologies, and building projects that combine creativity with problem solving. I thrive at the intersection of design and engineering.
               
               </p>
               <p>
-                My interests span web development, cloud technologies, and creating impactful digital products.
-                I'm always exploring new frameworks, contributing to open source, and pushing the boundaries
-                of what's possible on the web.
+                My interests include software development, data analysis, and experimenting with emerging technologies. I often use AI-powered tools to accelerate development, learn new concepts, and prototype ideas, while continuously improving my programming and problem-solving skills.
+              
+
               </p>
             </motion.div>
 
