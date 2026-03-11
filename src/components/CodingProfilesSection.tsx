@@ -23,7 +23,7 @@ const profiles = [
   {
     platform: "CodeChef",
     username: "@sahitiii",
-    stats: "1★ Coder • 1300+ Rating",
+    stats: "2★ Coder • 1400+ Rating",
     icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
     color: "hsl(15 80% 55%)",
     glowColor: "hsl(15 80% 55% / 0.2)",
@@ -41,7 +41,7 @@ const profiles = [
   {
     platform: "Codeforces",
     username: "@sahitiii",
-    stats: "Pupil • 1100+ Rating",
+    stats: "700 + Rating",
     icon: "M24 19.5V0h-6v19.5a1.5 1.5 0 001.5 1.5h3a1.5 1.5 0 001.5-1.5zM15 13.5V4H9v9.5a1.5 1.5 0 001.5 1.5h3a1.5 1.5 0 001.5-1.5zM6 19.5V9H0v10.5A1.5 1.5 0 001.5 21h3A1.5 1.5 0 006 19.5z",
     color: "hsl(210 90% 55%)",
     glowColor: "hsl(210 90% 55% / 0.2)",
