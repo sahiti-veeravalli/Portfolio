@@ -23,6 +23,13 @@ const education = [
     grade: "CGPA: 10 / 10",
     highlights: ["School Topper", "Academic Excellence Award"],
   },
+  {
+    degree: "Schooling",
+    institution: "St Anns High School, Tarnaka, Hyderabad",
+    duration: "2008 – 2018",
+    grade: "",
+    highlights: [],
+  },
 ];
 
 const EducationSection = () => {
