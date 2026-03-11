@@ -18,7 +18,7 @@ const education = [
   },
   {
     degree: "SSC (10th Grade)",
-    institution: "Sri Chaitanya Techno School, Ecil",
+    institution: "Sri Chaitanya Techno School, Ecil, Hyderabad",
     duration: "2018 – 2021",
     grade: "CGPA: 10 / 10",
     highlights: ["Cultural Head", "Host"],
