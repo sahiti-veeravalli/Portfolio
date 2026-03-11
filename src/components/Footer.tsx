@@ -6,7 +6,7 @@ const Footer = () => {
           © 2026 Sahiti Veeravalli. All rights reserved.
         </p>
         <p className="text-muted-foreground text-sm">
-          Built with <span className="text-primary">♥</span> and lots of coffee
+          Developed by <span className="text-primary">Sahiti Veeravalli</span>
         </p>
       </div>
     </footer>
