@@ -21,7 +21,7 @@ const education = [
     institution: "Sri Chaitanya Techno School, Ecil",
     duration: "2018 – 2021",
     grade: "CGPA: 10 / 10",
-    highlights: ["School Topper", "Academic Excellence Award"],
+    highlights: ["Cultural Head", "Academic Excellence Award"],
   },
   {
     degree: "Schooling",
