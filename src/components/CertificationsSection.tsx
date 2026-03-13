@@ -114,16 +114,10 @@ const CertificationsSection = () => {
             <motion.a
               key={cert.title}
               href={cert.link}
-              className="group relative flex items-center gap-5 p-5 md:p-6 rounded-2xl bg-card border border-border transition-all duration-500 overflow-hidden"
+              className="group relative flex items-center gap-5 p-5 md:p-6 rounded-2xl bg-card border border-border transition-all duration-500 overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02]"
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ delay: 0.3 + i * 0.12, duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
-              whileHover={{
-                y: -6,
-                scale: 1.02,
-                borderColor: cert.glowBorder,
-                boxShadow: `0 0 30px -8px ${cert.glowBorder}, inset 0 0 30px -15px ${cert.glowBorder}`,
-              }}
               style={{ perspective: "1000px" }}
             >
               {/* Medal icon */}
