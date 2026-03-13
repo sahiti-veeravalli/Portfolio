@@ -85,7 +85,8 @@ const Navbar = () => {
           ))}
           <motion.a
             href="/resume.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
