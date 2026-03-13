@@ -179,15 +179,10 @@ const CertificationsSection = () => {
           {courses.map((course, i) => (
             <motion.div
               key={course.title}
-              className="group p-5 rounded-2xl bg-card border border-border hover:border-primary/20 transition-all duration-500"
+              className="group p-5 rounded-2xl bg-card border border-border hover:border-primary/20 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_20px_40px_-12px_hsl(82_85%_55%/0.1)]"
               initial={{ opacity: 0, y: 40, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ delay: 0.9 + i * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
-              whileHover={{
-                y: -8,
-                scale: 1.04,
-                boxShadow: "0 20px 40px -12px hsl(82 85% 55% / 0.1)",
-              }}
             >
               <motion.span
                 className="text-3xl block mb-4"
