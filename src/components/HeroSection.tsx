@@ -123,35 +123,6 @@ const HeroSection = () => {
               
               <span>📍</span> Hyderabad, India
             </motion.span>
-            <motion.div
-              className="flex items-center justify-center gap-4 mt-3"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.4 }}>
-              
-              <motion.a
-                href="https://www.linkedin.com/in/sahiti-veeravalli/ttps://www.linkedin.com/in/sahiti-veeravalli/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card/50 text-muted-foreground hover:border-primary/40 hover:text-primary transition-all duration-300"
-                whileHover={{ y: -2, scale: 1.05 }}>
-                
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 100-4 2 2 0 000 4z" />
-                </svg>
-                <span className="text-sm font-medium">LinkedIn</span>
-              </motion.a>
-              <motion.a
-                href="mailto:sahithi.veeravalli19@gmail.com"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card/50 text-muted-foreground hover:border-primary/40 hover:text-primary transition-all duration-300"
-                whileHover={{ y: -2, scale: 1.05 }}>
-                
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <span className="text-sm font-medium">sahithi.veeravalli19@gmail.com</span>
-              </motion.a>
-            </motion.div>
           </motion.div>
 
           <motion.div
@@ -165,7 +136,6 @@ const HeroSection = () => {
               className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:opacity-90 transition-all glow-primary"
               whileHover={{ scale: 1.08, boxShadow: "0 0 60px -5px hsl(82 85% 55% / 0.6)" }}
               whileTap={{ scale: 0.92 }}>
-              
               View Projects
             </motion.a>
             <motion.a
@@ -173,29 +143,8 @@ const HeroSection = () => {
               className="px-8 py-4 border border-border rounded-full font-semibold text-lg text-foreground hover:border-primary hover:text-primary transition-all"
               whileHover={{ scale: 1.08, borderColor: "hsl(82 85% 55%)" }}
               whileTap={{ scale: 0.92 }}>
-              
               Contact Me
             </motion.a>
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 3 }}>
-          
-          <motion.div
-            animate={{ y: [0, 14, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="w-5 h-9 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-            
-            <motion.div
-              className="w-1 h-2 rounded-full bg-primary"
-              animate={{ opacity: [1, 0.3, 1] }}
-              transition={{ duration: 1.8, repeat: Infinity }} />
-            
           </motion.div>
         </motion.div>
       </motion.div>
