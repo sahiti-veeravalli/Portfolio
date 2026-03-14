@@ -16,6 +16,7 @@ const navItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showName, setShowName] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <motion.nav
