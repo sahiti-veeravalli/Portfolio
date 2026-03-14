@@ -1,6 +1,35 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 
+const SocialIcon = ({ label, href, icon, tooltip }: { label: string; href: string; icon: React.ReactNode; tooltip?: string }) => {
+  const [showTooltip, setShowTooltip] = useState(false);
+  return (
+    <div className="relative">
+      <motion.a
+        href={href}
+        target={label !== "Gmail" ? "_blank" : undefined}
+        rel={label !== "Gmail" ? "noopener noreferrer" : undefined}
+        className="w-14 h-14 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-300"
+        whileHover={{ y: -4, scale: 1.1 }}
+        onHoverStart={() => tooltip && setShowTooltip(true)}
+        onHoverEnd={() => setShowTooltip(false)}>
+        {icon}
+      </motion.a>
+      <AnimatePresence>
+        {showTooltip && tooltip && (
+          <motion.span
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            className="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs bg-card border border-border text-foreground px-3 py-1.5 rounded-lg shadow-lg pointer-events-none">
+            {tooltip}
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
