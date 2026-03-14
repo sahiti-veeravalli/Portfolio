@@ -90,34 +90,9 @@ const ContactSection = () => {
                 { label: "Gmail", href: "mailto:sahithi.veeravalli19@gmail.com", tooltip: "sahithi.veeravalli19@gmail.com", icon:
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
                 }
-              ].map((social) => {
-                const [showTooltip, setShowTooltip] = useState(false);
-                return (
-                  <div key={social.label} className="relative">
-                    <motion.a
-                      href={social.href}
-                      target={social.label !== "Gmail" ? "_blank" : undefined}
-                      rel={social.label !== "Gmail" ? "noopener noreferrer" : undefined}
-                      className="w-14 h-14 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-300"
-                      whileHover={{ y: -4, scale: 1.1 }}
-                      onHoverStart={() => social.tooltip && setShowTooltip(true)}
-                      onHoverEnd={() => setShowTooltip(false)}>
-                      {social.icon}
-                    </motion.a>
-                    <AnimatePresence>
-                      {showTooltip && social.tooltip && (
-                        <motion.span
-                          initial={{ opacity: 0, y: 8 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 8 }}
-                          className="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs bg-card border border-border text-foreground px-3 py-1.5 rounded-lg shadow-lg pointer-events-none">
-                          {social.tooltip}
-                        </motion.span>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
+              ].map((social) => (
+                <SocialIcon key={social.label} {...social} />
+              ))}
             </motion.div>
           </div>
 
