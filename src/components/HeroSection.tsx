@@ -125,6 +125,28 @@ const HeroSection = () => {
             </motion.span>
           </motion.div>
 
+          <motion.div
+            className="flex items-center justify-center gap-4"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 2.1 }}>
+            
+            <motion.a
+              href="#projects"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:opacity-90 transition-all glow-primary"
+              whileHover={{ scale: 1.08, boxShadow: "0 0 60px -5px hsl(82 85% 55% / 0.6)" }}
+              whileTap={{ scale: 0.92 }}>
+              View Projects
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="px-8 py-4 border border-border rounded-full font-semibold text-lg text-foreground hover:border-primary hover:text-primary transition-all"
+              whileHover={{ scale: 1.08, borderColor: "hsl(82 85% 55%)" }}
+              whileTap={{ scale: 0.92 }}>
+              Contact Me
+            </motion.a>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </section>);
 
