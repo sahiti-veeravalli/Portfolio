@@ -173,6 +173,28 @@
   .scroll-smooth {
     scroll-behavior: smooth;
   }
+
+  /* Green glow on hover for interactive elements */
+  a:hover,
+  button:hover,
+  .group:hover,
+  [role="button"]:hover,
+  input:hover,
+  textarea:hover,
+  select:hover {
+    box-shadow: 0 0 18px -4px hsl(82 85% 55% / 0.45), 0 0 6px -2px hsl(82 85% 55% / 0.25);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .light a:hover,
+  .light button:hover,
+  .light .group:hover,
+  .light [role="button"]:hover,
+  .light input:hover,
+  .light textarea:hover,
+  .light select:hover {
+    box-shadow: 0 0 16px -4px hsl(82 75% 40% / 0.4), 0 0 5px -2px hsl(82 75% 40% / 0.2);
+  }
 }
 
 html {
