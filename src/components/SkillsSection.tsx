@@ -114,7 +114,7 @@ const SkillsSection = () => {
                       className="h-full rounded-full"
                       style={{
                         background:
-                      "linear-gradient(90deg, hsl(82 85% 55%), hsl(120 70% 45%))",
+                      "linear-gradient(90deg, hsl(var(--primary)), hsl(120 70% 45%))",
                       }}
                       initial={{ width: 0, opacity: 0 }}
                       animate={isInView ? { width: `${skill.level}%`, opacity: 1 } : {}}
