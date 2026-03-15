@@ -9,10 +9,12 @@ import CertificationsSection from "@/components/CertificationsSection";
 import CodingProfilesSection from "@/components/CodingProfilesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import CursorGlow from "@/components/CursorGlow";
 
 const Index = () => {
   return (
-    <div className="bg-background text-foreground min-h-screen">
+    <div className="bg-background text-foreground min-h-screen cursor-none">
+      <CursorGlow />
       <Navbar />
       <HeroSection />
       <AboutSection />
