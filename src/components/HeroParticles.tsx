@@ -36,7 +36,7 @@ const HeroParticles = () => {
         vy: (Math.random() - 0.5) * 0.4,
         size: Math.random() * 2 + 0.5,
         opacity: Math.random() * 0.5 + 0.1,
-        color: Math.random() > 0.7 ? "160, 220, 50" : "255, 255, 255",
+        color: Math.random() > 0.7 ? "160, 220, 50" : isLight ? "60, 60, 60" : "255, 255, 255",
       }));
     };
 
