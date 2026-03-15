@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { useTheme } from "./ThemeProvider";
 
 const HeroParticles = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const isLight = document.documentElement.classList.contains("light");
+  const { theme } = useTheme();
+  const isLight = theme === "light";
 
   useEffect(() => {
     const canvas = canvasRef.current;
