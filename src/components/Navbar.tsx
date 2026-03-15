@@ -5,9 +5,10 @@ import { useTheme } from "./ThemeProvider";
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "Education", href: "#education" },
-  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Certifications", href: "#certifications" },
   { label: "Profiles", href: "#coding-profiles" },
   { label: "Contact", href: "#contact" },
