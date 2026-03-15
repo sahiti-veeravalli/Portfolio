@@ -54,7 +54,7 @@ const HeroSection = () => {
           animate={{ scale: 1, opacity: 0.35 }}
           transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }} />
         
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background light:from-background/90 light:via-background/70" />
       </motion.div>
 
       {/* Animated orbs */}
