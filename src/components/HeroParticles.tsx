@@ -96,7 +96,7 @@ const HeroParticles = () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
     };
-  }, []);
+  }, [isLight]);
 
   return (
     <canvas
