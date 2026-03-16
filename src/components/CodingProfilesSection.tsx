@@ -54,7 +54,7 @@ const CodingProfilesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="coding-profiles" className="py-32 relative overflow-hidden">
+    <section id="coding-profiles" className="relative overflow-hidden">
       <motion.div
         className="absolute top-1/2 left-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-3xl"
         animate={{ x: [0, 50, -30, 0], y: [0, -30, 40, 0] }}

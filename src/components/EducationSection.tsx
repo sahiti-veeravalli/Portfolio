@@ -37,7 +37,7 @@ const EducationSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="education" className="py-32 relative overflow-hidden">
+    <section id="education" className="relative overflow-hidden">
       <motion.div
         className="absolute top-1/3 right-0 w-[500px] h-[500px] rounded-full bg-accent/5 blur-3xl"
         animate={{ x: [0, -40, 20, 0], y: [0, 30, -20, 0] }}

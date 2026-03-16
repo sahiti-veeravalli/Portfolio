@@ -49,7 +49,7 @@ const ProjectsSection = () => {
   const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="projects" className="py-32 relative">
+    <section id="projects" className="relative">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           ref={headerRef}
