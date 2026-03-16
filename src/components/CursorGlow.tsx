@@ -18,11 +18,11 @@ const CursorGlow = () => {
   return (
     <div
       ref={glowRef}
-      className="pointer-events-none fixed z-[9999] -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full"
+      className="pointer-events-none fixed z-[9999] -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full"
       style={{
-        background: "radial-gradient(circle, hsl(82 85% 55% / 0.6) 0%, hsl(82 85% 55% / 0.15) 40%, transparent 70%)",
-        filter: "blur(2px)",
-        transition: "left 0.05s linear, top 0.05s linear",
+        background: "radial-gradient(circle, hsl(82 85% 55% / 0.35) 0%, hsl(82 85% 55% / 0.12) 35%, transparent 65%)",
+        filter: "blur(12px)",
+        transition: "left 0.08s linear, top 0.08s linear",
       }}
     />
   );

@@ -13,7 +13,7 @@ import CursorGlow from "@/components/CursorGlow";
 
 const Index = () => {
   return (
-    <div className="bg-background text-foreground min-h-screen cursor-none">
+    <div className="bg-background text-foreground min-h-screen">
       <CursorGlow />
       <Navbar />
       <HeroSection />
