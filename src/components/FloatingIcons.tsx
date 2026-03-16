@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   SiReact, SiNodedotjs, SiMongodb, SiJavascript, SiTypescript,
   SiPython, SiGit, SiDocker, SiTailwindcss,
-  SiHtml5, SiCss3, SiGithub, SiLinux, SiFigma, SiPostgresql,
+  SiHtml5, SiCss, SiGithub, SiLinux, SiFigma, SiPostgresql,
   SiFirebase, SiVercel, SiVite, SiNpm, SiExpress
 } from "react-icons/si";
 
