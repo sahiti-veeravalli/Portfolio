@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import {
   SiReact, SiNodedotjs, SiMongodb, SiJavascript, SiTypescript,
-  SiPython, SiGit, SiDocker, SiAmazon, SiTailwindcss,
+  SiPython, SiGit, SiDocker, SiTailwindcss,
   SiHtml5, SiCss, SiGithub, SiLinux, SiFigma, SiPostgresql,
   SiFirebase, SiVercel, SiVite, SiNpm
 } from "react-icons/si";
 
 const icons = [
   SiReact, SiNodedotjs, SiMongodb, SiJavascript, SiTypescript,
-  SiPython, SiGit, SiDocker, SiAmazonwebservices, SiTailwindcss,
-  SiHtml5, SiCss3, SiGithub, SiLinux, SiFigma, SiPostgresql,
+  SiPython, SiGit, SiDocker, SiTailwindcss,
+  SiHtml5, SiCss, SiGithub, SiLinux, SiFigma, SiPostgresql,
   SiFirebase, SiVercel, SiVite, SiNpm,
   SiReact, SiNodedotjs, SiTypescript, SiPython, SiGit,
   SiDocker, SiTailwindcss, SiHtml5, SiGithub, SiFirebase,
