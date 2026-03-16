@@ -10,10 +10,12 @@ import CodingProfilesSection from "@/components/CodingProfilesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
+import FloatingIcons from "@/components/FloatingIcons";
 
 const Index = () => {
   return (
-    <div className="bg-background text-foreground min-h-screen">
+    <div className="bg-background text-foreground min-h-screen relative">
+      <FloatingIcons />
       <CursorGlow />
       <Navbar />
       <HeroSection />
