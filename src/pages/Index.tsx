@@ -11,6 +11,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
 import FloatingIcons from "@/components/FloatingIcons";
+import SectionWrapper from "@/components/SectionWrapper";
 
 const Index = () => {
   return (
@@ -19,14 +20,30 @@ const Index = () => {
       <CursorGlow />
       <Navbar />
       <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <EducationSection />
-      <CertificationsSection />
-      <CodingProfilesSection />
-      <ContactSection />
+      <SectionWrapper>
+        <AboutSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <ProjectsSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <SkillsSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <ExperienceSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <EducationSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <CertificationsSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <CodingProfilesSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <ContactSection />
+      </SectionWrapper>
       <Footer />
     </div>
   );

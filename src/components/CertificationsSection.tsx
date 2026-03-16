@@ -77,7 +77,7 @@ const CertificationsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="certifications" className="py-32 relative overflow-hidden">
+    <section id="certifications" className="relative overflow-hidden">
       <motion.div
         className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-primary/3 blur-3xl"
         animate={{ rotate: [0, 360] }}

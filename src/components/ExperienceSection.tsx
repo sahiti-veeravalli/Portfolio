@@ -55,7 +55,7 @@ const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
+    <section id="experience" className="relative overflow-hidden">
       <div ref={ref} className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 60 }}

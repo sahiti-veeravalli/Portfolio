@@ -41,7 +41,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section id="contact" className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
 
       <div ref={ref} className="max-w-7xl mx-auto px-6 relative z-10">
