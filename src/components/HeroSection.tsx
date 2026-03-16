@@ -1,7 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import HeroParticles from "./HeroParticles";
-import heroImage from "@/assets/hero-3d.png";
 
 const letterVariants = {
   hidden: { opacity: 0, y: 80, rotateX: -90 },
@@ -38,25 +36,11 @@ const AnimatedText = ({ text, className }: {text: string;className?: string;}) =
 const HeroSection = () => {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg">
-      <HeroParticles />
-      <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
-        <motion.img
-          src={heroImage}
-          alt=""
-          className="w-full h-full object-cover"
-          initial={{ scale: 1.4, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.35 }}
-          transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }} />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background light:from-background/90 light:via-background/70" />
-      </motion.div>
-
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated orbs */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-primary/10 blur-3xl"
@@ -67,11 +51,6 @@ const HeroSection = () => {
         className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/10 blur-3xl"
         animate={{ x: [0, -50, 40, 0], y: [0, 30, -50, 0], scale: [1, 0.8, 1.2, 1] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }} />
-      
-      <motion.div
-        className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-primary/5 blur-2xl"
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }} />
       
 
       <motion.div className="relative z-10 max-w-7xl mx-auto px-6 text-center" style={{ y: textY, opacity }}>
