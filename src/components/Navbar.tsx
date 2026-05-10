@@ -15,6 +15,8 @@ const navItems = [
   { label: "Contact", href: "#contact", id: "contact" },
 ];
 
+const resumeUrl = new URL("../assets/resume.pdf", import.meta.url).href;
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileResumeOpen, setIsMobileResumeOpen] = useState(false);
@@ -131,7 +133,7 @@ const Navbar = () => {
             <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="w-52 rounded-xl border border-border bg-popover/95 backdrop-blur-xl shadow-lg overflow-hidden">
                 <a
-                  href="/resume.pdf"
+                  href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
@@ -139,7 +141,7 @@ const Navbar = () => {
                   Open in browser
                 </a>
                 <a
-                  href="/resume.pdf"
+                  href={resumeUrl}
                   download
                   className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors border-t border-border"
                 >
@@ -191,7 +193,7 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <a
-                    href="/resume.pdf"
+                    href={resumeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
@@ -200,7 +202,7 @@ const Navbar = () => {
                     Open in browser
                   </a>
                   <a
-                    href="/resume.pdf"
+                    href={resumeUrl}
                     download
                     className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors border-t border-border"
                     onClick={() => setIsMobileResumeOpen(false)}
