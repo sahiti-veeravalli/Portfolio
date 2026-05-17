@@ -65,7 +65,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, letterSpacing: "0.3em" }}
             transition={{ duration: 2, delay: 0.3 }}>
             
-            Full-Stack Developer
+            Java Backend Developer
           </motion.p>
 
           <h1 className="leading-[0.9] mb-8">
@@ -123,6 +123,15 @@ const HeroSection = () => {
               whileHover={{ scale: 1.08, borderColor: "hsl(82 85% 55%)" }}
               whileTap={{ scale: 0.92 }}>
               Contact Me
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/sahiti-veeravalli/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 border border-border rounded-full font-semibold text-lg text-foreground hover:border-primary hover:text-primary transition-all"
+              whileHover={{ scale: 1.08, borderColor: "hsl(82 85% 55%)" }}
+              whileTap={{ scale: 0.92 }}>
+              LinkedIn
             </motion.a>
           </motion.div>
         </motion.div>
